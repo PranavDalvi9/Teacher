@@ -1,4 +1,10 @@
 #main{
     display: grid;
     grid-template-columns: repeat(4,25%);
+    gap: 3%;
+}
+
+img{
+    width: 80%;
+    height: 50%;
 }

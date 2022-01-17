@@ -18,7 +18,8 @@ function appendArticles(articles, main) {
 
     articles.forEach((ele) =>{
         let div = document.createElement("div");
-        div.onclick
+        div.addEventListener("onclick",detail(ele))
+
 
         let title = document.createElement("p");
         title.innerText = ele.title;
@@ -31,6 +32,11 @@ function appendArticles(articles, main) {
         main.append(div);
     })
 
+}
+
+
+function detail(ele){
+    console.log("here")
 }
 
 export { apiCall, appendArticles }
