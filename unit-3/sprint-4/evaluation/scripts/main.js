@@ -18,8 +18,17 @@ function appendArticles(articles, main) {
 
     articles.forEach((ele) =>{
         let div = document.createElement("div");
+        div.onclick
 
-        
+        let title = document.createElement("p");
+        title.innerText = ele.title;
+
+        let img = document.createElement("img");
+        img.src = ele.image;
+
+        div.append(title, img)
+
+        main.append(div);
     })
 
 }

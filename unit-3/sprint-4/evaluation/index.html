@@ -30,7 +30,7 @@
 </html>
 
 <script type="Module">
-  let api1 = "https://gnews.io/api/v4/search?q=example&token=6b8aafebfc90195221768d057514cf66"
+  // let api1 = "https://gnews.io/api/v4/search?q=example&token=f5734d9871399a200b113d2b8269ffea"
 
   let main = document.getElementById("main")
 
@@ -38,10 +38,10 @@
   console.log(apiCall(api1));
 
   let user = await apiCall(api1);
-  
+  console.log(user)
   let data = user.articles
 console.log("data",data);
 
-//appendArticles(data, main)
+appendArticles(data, main)
 
 </script>
