@@ -1,10 +1,10 @@
 function storeSearchterm(term) {
 
-    var div = document.createElement("div")
-
-     var title = document.createElement("p");
-
      
+    let res = await fetch (term);
+
+    let data = await res.json();
+    return data;
 
 }
 

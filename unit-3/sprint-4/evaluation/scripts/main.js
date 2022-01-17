@@ -19,7 +19,8 @@ function appendArticles(articles, main) {
     articles.forEach((ele) =>{
         let div = document.createElement("div");
             div.onclick = (ele)=>{
-               store(term)
+             //  store(term)
+               window.location.href= "news.html";
             }
 
 
@@ -39,12 +40,6 @@ function appendArticles(articles, main) {
 
 }
 
-function store(data){
-    location.setItems("clicked", JSON.stringify(data));
-}
 
-function detail(ele){
-    console.log("here")
-}
 
 export { apiCall, appendArticles }
