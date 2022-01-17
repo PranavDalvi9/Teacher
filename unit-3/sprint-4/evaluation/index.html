@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="sidebar">
+
+        <!--DO NOT CHANGE THIS ID's-->
+        <input type="text" placeholder="Search">
+        <button>Search</button>
+        
+        <a href="index.html"><h3>Home Page</h3></a>
+
+      </div>
+
+      <div id="main">
+        <!--DO NOT CHANGE THIS ID's-->
+
+      </div>
+    </div>
+  </body>
+
+</html>
+
+<script type="Module">
+  let api1 = "https://gnews.io/api/v4/search?q=example&token=6b8aafebfc90195221768d057514cf66"
+
+  let main = document.getElementById("main")
+
+  import { apiCall, appendArticles } from "./scripts/main.js";
+  console.log(apiCall(api1));
+
+  let user = await apiCall(api1);
+  
+  let data = user.articles
+console.log("data",data);
+
+//appendArticles(data, main)
+
+</script>
