@@ -1,10 +1,21 @@
 #main{
     display: grid;
-    grid-template-columns: repeat(4,25%);
+    grid-template-columns: repeat(3,33%);
     gap: 3%;
+    background-color: crimson;
 }
 
 img{
     width: 80%;
     height: 50%;
+}
+
+#container{
+    display: flex;
+   
+}
+
+#sidebar{
+    background-color: burlywood;
+    height: 100%;
 }

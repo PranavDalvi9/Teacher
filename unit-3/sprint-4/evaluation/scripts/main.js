@@ -18,22 +18,30 @@ function appendArticles(articles, main) {
 
     articles.forEach((ele) =>{
         let div = document.createElement("div");
-        div.addEventListener("onclick",detail(ele))
+            div.onclick = (ele)=>{
+               store(term)
+            }
 
 
         let title = document.createElement("p");
         title.innerText = ele.title;
 
+        let desc = document.createElement("p");
+        desc.innerText = ele.description
+
         let img = document.createElement("img");
         img.src = ele.image;
 
-        div.append(title, img)
+        div.append(title,img,desc)
 
         main.append(div);
     })
 
 }
 
+function store(data){
+    location.setItems("clicked", JSON.stringify(data));
+}
 
 function detail(ele){
     console.log("here")

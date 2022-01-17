@@ -14,10 +14,15 @@
       <div id="sidebar">
 
         <!--DO NOT CHANGE THIS ID's-->
-        <input type="text" placeholder="Search">
-        <button>Search</button>
-        
         <a href="index.html"><h3>Home Page</h3></a>
+        <button>Login</button><br>
+        <input type="text" placeholder="Search"><br>
+        <button onclick="search()">Search</button><br>
+       <button>Start Ups</button><br>
+       <button>News</button><br>
+
+
+       
 
       </div>
 
@@ -31,7 +36,11 @@
 </html>
 
 <script type="Module">
-  // let api1 = "https://gnews.io/api/v4/search?q=example&token=f5734d9871399a200b113d2b8269ffea"
+
+function search() {
+  console.log("here")
+}
+   let api1 = "https://gnews.io/api/v4/search?q=example&token=f5734d9871399a200b113d2b8269ffea"
 
   let main = document.getElementById("main")
 
