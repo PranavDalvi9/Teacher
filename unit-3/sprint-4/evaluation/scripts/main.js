@@ -21,6 +21,8 @@ function appendArticles(articles, main) {
             div.onclick = (ele)=>{
              //  store(term)
                window.location.href= "news.html";
+               var data = ele;
+               localStorage.setItem("dataInfo",JSON.stringify("data"));
             }
 
 

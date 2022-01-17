@@ -20,7 +20,7 @@
         
         <button id="btn">Search</button><br><br>
        <button>Start Ups</button><br><br>
-       <button>News</button><br><br>
+       <button>News</button><br>br
 
 
        
@@ -48,7 +48,7 @@ btn.onclick = ()=>{
   }
 
 
-  //  let api1 = "https://gnews.io/api/v4/search?q=example&token=f5734d9871399a200b113d2b8269ffea"
+   let api1 = "https://gnews.io/api/v4/search?q=example&token=f5734d9871399a200b113d2b8269ffea"
 
   let main = document.getElementById("main")
 
@@ -61,5 +61,24 @@ btn.onclick = ()=>{
 console.log("data",data);
 
 appendArticles(data, main)
+
+
+
+
+
+
+// var data3 = {
+//                 "title": "A huge Google Pixel 6 update is here to fix loads of annoying bugs",
+//                 "description": "An update rolling out to the Google Pixel 6 and Pixel 6 Pro should solve a few of the myriad issues that plague the phone.",
+//                 "content": "Audio player loading…\nIf there's one thing the Google Pixel 6 and Pixel 6 Pro might be remembered for, it's the ongoing issues with the phones many users have been experiencing, which have ensured the phones are constantly the center of attention and... [2269 chars]",
+//                 "url": "https://www.techradar.com/news/a-huge-google-pixel-6-update-is-here-to-fix-loads-of-annoying-bugs",
+//                 "image": "https://cdn.mos.cms.futurecdn.net/pQxm5YWksuiuvAwfM4NHV7-1200-80.jpg",
+//                 "publishedAt": "2022-01-17T10:17:19Z",
+//                 "source": {
+//                     "name": "TechRadar",
+//                     "url": "https://www.techradar.com"
+//  }
+// }
+//                localStorage.setItem("dataInfo",JSON.stringify(data3));
 
 </script>

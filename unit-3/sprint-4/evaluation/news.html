@@ -32,3 +32,18 @@
   </body>
 
 </html>
+
+<script>
+  var out = JSON.parse(localStorage.getItem("dataInfo"));
+  console.log(out);
+
+  var head = document.getElementById("headline");
+  head.innerText= title;
+
+
+  var img = document.getElementById("img");
+  img.src = image;
+
+  var content = document.getElementById("p");
+  content.innerText = content;
+</script>
