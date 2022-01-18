@@ -2,12 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3,33%);
     gap: 3%;
-    background-color: crimson;
+    padding: 3%;
+    width: 100%;
+    height: 100%;
+    /* //background-color: crimson; */
 }
 
 img{
     width: 90%;
-    height: 90%;
+    height: 70%;
 }
 
 #container{
