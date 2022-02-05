@@ -45,3 +45,51 @@
 
 
 
+function runProgram(input) {
+	input =input.trim().split("\n");
+	var n = +input[0].trim();
+	var pArr = input[1].trim().split(" ").map(Number);
+	pArr = pArr.sort(function(a,b){
+        if(a>b) return 1;
+        if(b>a)return -1;
+        return 0;
+    })
+    
+	var cArr= input[2].trim().split(" ").map(Number);
+	cArr = cArr.sort(function(a,b){
+        if(a>b) return 1;
+        if(b>a)return -1;
+        return 0;
+    })
+// 	console.log(n,pArr,cArr);
+	check(n,pArr,cArr);
+}
+function check(n,pArr,cArr){
+    sum= 0
+    for(var i=0; i<n; i++){
+        var a = pArr[i]*cArr[i];
+        // console.log(a);
+        sum += a;
+    }
+    console.log(sum);
+}
+if (process.env.USERNAME === "") {
+	runProgram(``);
+} else {
+	process.stdin.resume();
+	process.stdin.setEncoding("ascii");
+	let read = "";
+	process.stdin.on("data", function (input) {
+		read += input;
+	});
+	process.stdin.on("end", function () {
+		read = read.replace(/\n$/, "");
+		read = read.replace(/\n$/, "");
+		runProgram(read);
+	});
+	process.on("SIGINT", function () {
+		read = read.replace(/\n$/, "");
+		runProgram(read);
+		process.exit(0);
+	});
+}
