@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema({
     lastName : {type:String, require:true},
     age: {type:Number, require:true},
     email:{type:String, require:true},
-    gender:{type:String, require:false, default:"female"}
+    gender:{type:String, require:false, default:"female"},
+    type:{type:String, require:false, default:"customer"}
 },
 {
     versionKey:false,
@@ -36,6 +37,12 @@ const branchSchema = new mongoose.Schema({
 
 
 const masterSchema = new mongoose.Schema({
+    // master: {type:String, require:true},
+    user_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"user",
+        require:true,
+    },
     saving_id:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"saving",
@@ -58,16 +65,16 @@ const savingSchema = new mongoose.Schema({
     accountNumber:{type:String, require:true},
     balance:{type:Number, require:true},
     interestRate:{type:Number, require:true},
-    user_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"user",
-        require:true,
-    },
-    branch_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"branch",
-        require:true,
-    }
+    // user_id:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:"user",
+    //     require:true,
+    // },
+    // branch_id:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:"branch",
+    //     require:true,
+    // }
 },
 {
     versionKey:false,
@@ -78,16 +85,16 @@ const fixedSchema = new mongoose.Schema({
     accountNumber:{type:String, require:true},
     balance:{type:Number, require:true},
     interestRate:{type:Number, require:true},
-    user_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"user",
-        require:true,
-    },
-    branch_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"branch",
-        require:true,
-    }
+    // user_id:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:"user",
+    //     require:true,
+    // },
+    // branch_id:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:"branch",
+    //     require:true,
+    // }
 },
 {
     versionKey:false,
@@ -149,11 +156,12 @@ app.get("/branch", async(req,res) =>{
 // -------------------master-----------
 
 
-const Master = mongoose.model("master",branchSchema);
+const Master = mongoose.model("master",masterSchema);
 
 app.post("/master", async(req,res) =>{
     try {
         const master = await Master.create(req.body);
+        console.log(master);
         res.send(master);
 
     } catch (error) {
@@ -163,7 +171,16 @@ app.post("/master", async(req,res) =>{
 
 app.get("/master", async(req,res) =>{
     try {
-        const master = await Master.find().populate("saving_id").populate("fixed_id").lean().exec();
+        const master = await Master.find().populate("user_id").populate("saving_id").populate("fixed_id").lean().exec();
+        res.send(master);
+    } catch (error) {
+        res.send(error.message);
+    }
+})
+
+app.get("/master/:id", async(req,res) =>{
+    try {
+        const master = await Master.findById(req.params.id).populate("user_id").populate("saving_id").populate("fixed_id").lean().exec();
         res.send(master);
     } catch (error) {
         res.send(error.message);
@@ -188,7 +205,7 @@ app.post("/saving", async(req,res) =>{
 
 app.get("/saving", async(req,res) =>{
     try {
-        const saving = await Saving.find().populate("user_id").populate("branch_id").lean().exec();
+        const saving = await Saving.find().lean().exec();
         res.send(saving);
     } catch (error) {
         res.send(error.message);
@@ -212,7 +229,7 @@ app.post("/fixed", async(req,res) =>{
 
 app.get("/fixed", async(req,res) =>{
     try {
-        const fixed = await Fixed.find().populate("user_id").populate("branch_id").lean().exec();
+        const fixed = await Fixed.find().lean().exec();
         res.send(fixed);
     } catch (error) {
         res.send(error.message);
