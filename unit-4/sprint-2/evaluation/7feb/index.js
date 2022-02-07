@@ -236,8 +236,19 @@ app.get("/fixed", async(req,res) =>{
     }
 })
 
+app.delete("/fixed/:id", async(req,res) =>{
+    try {
+        const fixed = await Fixed.findByIdAndDelete(req.params.id).lean().exec();
+        res.send(fixed);
 
-// -------------------
+    } catch (error) {
+        res.send(error.message);
+    }
+})
+
+
+// ------------------- api---------------
+
 app.listen(2134, async function(){
     try {
         await connect();
