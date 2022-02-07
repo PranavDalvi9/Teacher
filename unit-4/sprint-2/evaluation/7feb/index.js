@@ -34,6 +34,26 @@ const branchSchema = new mongoose.Schema({
 });
 
 
+
+const masterSchema = new mongoose.Schema({
+    saving_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"saving",
+        require:true,
+    },
+    fixed_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"fixed",
+        require:true,
+    }
+},
+{
+    versionKey:false,
+    timestamps:true,
+});
+
+
+
 const savingSchema = new mongoose.Schema({
     accountNumber:{type:String, require:true},
     balance:{type:Number, require:true},
@@ -58,6 +78,16 @@ const fixedSchema = new mongoose.Schema({
     accountNumber:{type:String, require:true},
     balance:{type:Number, require:true},
     interestRate:{type:Number, require:true},
+    user_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"user",
+        require:true,
+    },
+    branch_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"branch",
+        require:true,
+    }
 },
 {
     versionKey:false,
@@ -116,6 +146,30 @@ app.get("/branch", async(req,res) =>{
     }
 })
 
+// -------------------master-----------
+
+
+const Master = mongoose.model("master",branchSchema);
+
+app.post("/master", async(req,res) =>{
+    try {
+        const master = await Master.create(req.body);
+        res.send(master);
+
+    } catch (error) {
+        res.send(error.message);
+    }
+})
+
+app.get("/master", async(req,res) =>{
+    try {
+        const master = await Master.find().populate("saving_id").populate("fixed_id").lean().exec();
+        res.send(master);
+    } catch (error) {
+        res.send(error.message);
+    }
+})
+
 
 // -----------------saving acc-------------
 
@@ -158,7 +212,7 @@ app.post("/fixed", async(req,res) =>{
 
 app.get("/fixed", async(req,res) =>{
     try {
-        const fixed = await Fixed.find().lean().exec();
+        const fixed = await Fixed.find().populate("user_id").populate("branch_id").lean().exec();
         res.send(fixed);
     } catch (error) {
         res.send(error.message);
