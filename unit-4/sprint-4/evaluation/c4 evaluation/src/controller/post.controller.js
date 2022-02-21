@@ -15,9 +15,15 @@ router.post("",async(req,res) =>{
 })
 
 
-router.post("", async(req,res) =>{
+router.get("", async(req,res) =>{
     try {
-        const user = await User.create(req.body);
+        const page = req.query.page || 1;
+        const size = req.query.size || 10;
+
+        const user = await User.find()
+        .skip((page-1)*size)
+        .limit(size)
+        .lean().exec();
         return res.send(user);
     } catch (error) {
         console.log(error.message);
