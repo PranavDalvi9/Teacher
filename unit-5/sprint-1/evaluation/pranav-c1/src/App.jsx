@@ -25,7 +25,10 @@ function App() {
         <button
           className="remBook"
           onClick={() => {
-            setAddBook(addBook - 1);
+            // if(addBook > 13){
+              setAddBook(addBook - 1);
+            // }
+           
           }}
         >
           -
@@ -46,14 +49,13 @@ function App() {
           +
         </button>
 
-        <button
-          className="remPen"
-          onClick={() => {
-            setPen(addPen - 1);
-          }}
+        <button className="remPen"
+         onClick={() => {
+          setPen(addPen - 1);
+        }}
         >
-          -
-        </button>
+        -
+    </button>
 
         <span className="totalPens">{addPen}</span>
       </div>
