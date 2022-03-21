@@ -1,0 +1,22 @@
+{
+  "houses": [
+    {
+      "name": "asa",
+      "ownerName": "as",
+      "address": "asa",
+      "areaCode": "assd",
+      "rent": "sad",
+      "preferredTenant": "married",
+      "id": 1
+    },
+    {
+      "name": "pranav dalvi",
+      "ownerName": "pranav",
+      "address": "mumbai",
+      "areaCode": "400001",
+      "rent": "1",
+      "preferredTenant": "bachelor",
+      "id": 2
+    }
+  ]
+}
