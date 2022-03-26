@@ -1,19 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import "./App.css";
+// import "./App.css";
 import { Rentals } from "./Components/Rentals/Rentals";
 import { AddHouse } from "./Components/AddHouse/AddHouse";
-
 
 function App() {
   return (
     <div className="App">
-    <Rentals/>
-       <button className="toggleForm">Add House
+      <button className="toggleForm">
         {/* Show text Add House or Show Rentals based on state */}
+        <AddHouse />
       </button>
-      <AddHouse/>
       {/* Show component based on state */}
+      <Rentals/>
       <br />
     </div>
   );

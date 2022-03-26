@@ -1,35 +1,54 @@
-import { useEffect, useState } from "react";
+import axios from 'axios'
 import "./Rentals.css";
-import axios from "axios";
+import { useState, useEffect } from "react";
+
 export const Rentals = () => {
 
-  const [data, setData] = useState([]);
+  const [houses,sethouses] = useState([]);
 
+  useEffect(( )=>{
+    function fetchData(url) { 
+    axios.get(url).then(res=>{sethouses(res.data)})
+    }
+    fetchData('http://localhost:8080/houses')
+    console.log(houses,"houses")
+  },[]);
 
-  useEffect(() => {
-    axios.get(`http://localhost:8080/houses`).then(res => {
-      setData(res.data)
-    });
-    // getData();
-  }, [])
-
-
-  const getData = () => {
-    axios.get(`http://localhost:8080/houses`).then(res => {
-      setData(res.data)
-    });
-
+  const sortid= () => {
+    let newarr = [];
+    newarr = houses.sort((a,b)=>(b.id-a.id))
+    console.log(houses)
+    sethouses((houses)=>(newarr))
   }
-
+  const alh= () => {
+    let newarr = [];
+    houses.sort((a,b)=>{return a.areaCode -b.areaCode})
+    sethouses(newarr)
+  }
+  const ahl= () => {
+    let newarr = [];
+    houses.sort((a,b)=>{return b.areaCode -a.areaCode})
+    sethouses(newarr)
+  }
+  const rlh= () => {
+    let newarr = [];
+    newarr = houses.sort((a,b)=>{return a.rent -b.rent})
+    sethouses(newarr)
+  }
+  const rhl= () => {
+    let newarr = [];
+    newarr = houses.sort((a,b)=>{return b.rent - a.rent})
+    sethouses(newarr)
+  }
 
   return (
     <div className="rentalContainer">
       <div className="sortingButtons">
-        <button className="sortById">Sort by ID</button>
-        <button className="sortByRentAsc">Rent Low to high</button>
-        <button className="sortByRentDesc">Rent High to low</button>
-        <button className="sortByAreaAsc">Area Low to high</button>
-        <button className="sortByAreaDesc">Area High to Low</button>
+        <button onClick={sortid} className="sortById">Sort by ID</button>
+        <button onClick={rlh} className="sortByRentAsc">Rent Low to high</button>
+        <button onClick={rhl} className="sortByRentDesc">Rent High to low</button>
+        <button onClick={alh} className="sortByAreaAsc">Area Low to high</button>
+        <button onClick={ahl} className="sortByAreaDesc">Area High to Low</button>
       </div>
       <input
         className="searchAddress"
@@ -50,7 +69,7 @@ export const Rentals = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((house, index) => {
+          {houses.map((house, index) => {
             return (
               <tr key={house.id} className="houseDetails">
                 <td className="houseId">{house.id}</td>
