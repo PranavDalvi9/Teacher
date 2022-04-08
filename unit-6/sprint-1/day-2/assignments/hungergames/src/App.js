@@ -5,7 +5,7 @@ import RestaurantDetails from "./Components/RestaurantDetails"
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+      <h1>HUNGER GAMES</h1>
       <RestaurantDetails/>
     </div>
   );

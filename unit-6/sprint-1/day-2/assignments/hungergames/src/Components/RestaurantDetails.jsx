@@ -21,14 +21,14 @@ useEffect(() => {
    }
  }).then(res => setData(res.data));
     // console.log("new",data);
-    console.log(rating)
+    // console.log(rating)
 }, [rating, payMent])
 
 
   const AllData = () =>{
     axios.get("http://localhost:8080/get-restaurants").then(res => setData(res.data));
     // console.log("new",data);
-    console.log(rating)
+    // console.log(rating)
   }
 
 
@@ -41,7 +41,7 @@ const handelSort = ()=>{
 
  })
  setData(sortdata)
- console.log("asc",data)
+//  console.log("asc",data)
 }
 
 const handelSortDesc = ()=>{

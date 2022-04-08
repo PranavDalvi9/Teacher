@@ -147,7 +147,7 @@
             "Rating" : 4,
             "Votes" :  776,
             "Reviews": 213,
-            "Payment": "online",
+            "Payment": ["online" , "all"],
             "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
         },
         {
@@ -195,6 +195,66 @@
             "Category": "Pizza",
             "Costfor2": 400,
             "Rating" : 4,
+            "Votes" :  776,
+            "Reviews": 213,
+            "Payment": "online",
+            "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
+        },
+        {
+            "Name" : "Punjabi Nation",
+            "Category": "Asian, North Indian",
+            "Costfor2": 300,
+            "Rating" : 2,
+            "Votes" :  776,
+            "Reviews": 213,
+            "Payment": "online",
+            "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
+        },
+        {
+            "Name" : "CCD",
+            "Category": "Asian, North Indian",
+            "Costfor2": 975,
+            "Rating" : 2,
+            "Votes" :  776,
+            "Reviews": 213,
+            "Payment": "online",
+            "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
+        },
+        {
+            "Name" : "Burger King",
+            "Category": "Asian, North Indian",
+            "Costfor2": 898,
+            "Rating" : 2,
+            "Votes" :  776,
+            "Reviews": 213,
+            "Payment": "online",
+            "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
+        },
+        {
+            "Name" : "KFC",
+            "Category": "Asian, North Indian",
+            "Costfor2": 3456,
+            "Rating" : 3,
+            "Votes" :  776,
+            "Reviews": 213,
+            "Payment": "online",
+            "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
+        },
+        {
+            "Name" : "Dominos",
+            "Category": "Asian, North Indian",
+            "Costfor2": 567,
+            "Rating" : 3,
+            "Votes" :  776,
+            "Reviews": 213,
+            "Payment": "online",
+            "image": "https://i.pinimg.com/564x/e2/34/d5/e234d531027f4c23a617e31fbd462731.jpg"
+        },
+        {
+            "Name" : "Subway",
+            "Category": "Asian, North Indian",
+            "Costfor2": 400,
+            "Rating" : 1,
             "Votes" :  776,
             "Reviews": 213,
             "Payment": "online",
