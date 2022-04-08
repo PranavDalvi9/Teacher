@@ -84,15 +84,17 @@ const handelSortDesc = ()=>{
                     <div className="leftProdDet">
                       <div className="ProdName">{e.Name}</div>
                       <div className="ProdCat">{e.Category}</div>
-                      <div>{e.Costfor2}</div>
-                      <div>Accepts {e.Payment} Payment only</div>
+                      <div className="Costfor2">Cost ₹{e.Costfor2} for two</div>
+                      <div className="paymentMode">Accepts {e.Payment} Payment only</div>
+                      
                     </div>
     
                     <div className="rightProdDet">
-                        <div className="RatingProd">{e.Rating}</div>
+                        <div className="RatingProd">{e.Rating} ★</div>
                         <div>{e.Votes} votes</div>
                         <div>{e.Reviews} reviews</div>
                     </div>
+                    
                 </div>
     
                 <div>
