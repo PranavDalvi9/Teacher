@@ -1,0 +1,70 @@
+#RestaurantDetails{
+    width: 95%;
+    margin: auto;
+}
+
+#sorting>button{
+    margin-left: 2%;
+}
+
+.productsDis{
+    /* display: flex; */
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto ;
+    column-gap: 3%;
+    row-gap: 3%;
+}
+
+.indivProd{
+    border: 2px solid red;
+    width: 100%;
+}
+.LeftImage{
+    width: 60%;
+    height: 60%;
+}
+.LeftImage>img{
+    width: 100%;
+    height: 80%;
+}
+
+.leftProdDet{
+    align-items: center;
+    /* justify-items: left; */
+    /* align-items: flex-start; */
+    /* align-content: flex-start; */
+    width: 100%;
+    /* border: 2px solid palegreen; */
+}
+
+.ProdName{
+    font-size: larger;
+    font-weight: bolder;
+    color: brown;
+}
+.ProdCat{
+    color: green;
+    /* font-weight: lighter; */
+}
+.rightProdDet{
+    width: 45%;
+}
+.RatingProd{
+    font-weight: bolder;
+    background-color: #267E3E;
+    color: aliceblue;
+    border-radius: 6%;
+    width: 50%;
+}
+
+#ProdAllinfo{
+    display: flex;
+    
+}
+
+
+.orderNow{
+    
+}

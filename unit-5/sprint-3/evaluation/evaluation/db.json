@@ -1,8 +1,8 @@
 {
-    "products": [ 
+    "books": [ 
         {
         "title": "Tagopia",
-        "image_url": "http://dummyimage.com/199x237.png/ff4444/ffffff",
+        "imageUrl": "http://dummyimage.com/199x237.png/ff4444/ffffff",
         "description": "Struck by field hockey puck, sequela",
         "author": "Kelley",
         "price": 5505,
@@ -10,7 +10,7 @@
         "isbnNumber": "87-081-6336"
       }, {
         "title": "Shufflester",
-        "image_url": "http://dummyimage.com/288x148.png/cc0000/ffffff",
+        "imageUrl": "http://dummyimage.com/288x148.png/cc0000/ffffff",
         "description": "Other myositis, unspecified hand",
         "author": "Maynord",
         "price": 9800,
@@ -18,7 +18,7 @@
         "isbnNumber": "16-561-0335"
       }, {
         "title": "Linkbuzz",
-        "image_url": "http://dummyimage.com/225x257.png/5fa2dd/ffffff",
+        "imageUrl": "http://dummyimage.com/225x257.png/5fa2dd/ffffff",
         "description": "Mech compl of ventricular intracranial (communicating) shunt",
         "author": "Esmeralda",
         "price": 8939,

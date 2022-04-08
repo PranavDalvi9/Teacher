@@ -24,7 +24,13 @@ export const Home = () => {
               ex : title, theme, description, date, time, location, image(optional)
               the classNames should be also : title, theme, description, date, time, location, image(optional)
              */}
-             <div>{el.theme}</div>
+             <div className="title">{el.title}</div>
+             <div className="theme">{el.theme}</div>
+             <div className="description">{el.description}</div>
+             <div className="date">{el.date}</div>
+             <div className="time">{el.time}</div>
+             <div className="location">{el.location}</div>
+             <div className="image"><img src= {el.image} alt="" /></div>
             </Link>
           );
         })}

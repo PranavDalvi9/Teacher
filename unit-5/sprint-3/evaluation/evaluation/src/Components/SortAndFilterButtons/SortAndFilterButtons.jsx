@@ -14,6 +14,10 @@ export const SortAndFilterButtons = ({ handleSort }) => {
         and sort the data.
 
       */}
+      <button onClick={()=>{handleSort("title","asc")}} className="sortByTitleAsc" >sort title in Ascending order</button>
+      <button onClick={()=>{handleSort("title","des")}} className="sortByTitleDesc" >sort title in Descending order</button>
+      <button onClick={()=>{handleSort("price","asc")}} className="sortByPriceAsc" >sort price asending order</button>
+      <button onClick={()=>{handleSort("price","des")}} className="sortByPriceDesc" >sort price descending order</button>
     </div>
   );
 };
