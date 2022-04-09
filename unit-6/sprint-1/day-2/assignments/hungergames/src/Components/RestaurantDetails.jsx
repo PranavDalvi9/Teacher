@@ -8,7 +8,7 @@ export default function RestaurantDetails() {
 
     const[data, setData] = useState([]);
     const[filterdata, setFilterdata] = useState([])
-    const[rating, setRating] = useState(3)
+    const[rating, setRating] = useState(5)
     const[payMent, setPayMent] = useState("card")
 
 useEffect(() => {
