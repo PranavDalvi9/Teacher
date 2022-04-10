@@ -17,7 +17,7 @@ const initState = {
 } 
 
 export const reducer = (store = initState, {type, payload}) => {
-    console.log("store" , store)
+    // console.log("store" , store)
     // console.log("store",store)
      switch(type){
         case CHANGE_NAME:

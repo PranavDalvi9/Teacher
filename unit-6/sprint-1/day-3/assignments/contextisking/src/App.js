@@ -4,6 +4,7 @@ import RegistrationOne from './Components/RegistrationOne';
 import RegistrationTwo from './Components/RegistrationTwo';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import Users from './Components/Users';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path = "/one" element = {<RegistrationOne/>} />
         <Route path='/two' element= {<RegistrationTwo/>} />
+        <Route path='/users' element = {<Users/>} />
       </Routes>
       
       {/* <RegistrationOne/>
