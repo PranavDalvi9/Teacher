@@ -1,0 +1,14 @@
+{
+  "usersData": [
+    {
+      "username": "asaaa",
+      "password": "111",
+      "id": 1
+    },
+    {
+      "username": "aa",
+      "password": "aaa",
+      "id": 2
+    }
+  ]
+}

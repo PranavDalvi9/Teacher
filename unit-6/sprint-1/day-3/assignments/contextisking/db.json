@@ -8,6 +8,24 @@
       "address": "Mumbai",
       "pincode": "400025",
       "id": 1
+    },
+    {
+      "name": "aaaa",
+      "age": "111",
+      "dateofBirth": "2022-04-13",
+      "state": "Maharashtra",
+      "address": "401/B WING,ISHAAN BLDG,KHEDGALLI,PRABHAD",
+      "pincode": "400025",
+      "id": 2
+    },
+    {
+      "name": "asdsd",
+      "age": "2324",
+      "dateofBirth": "2022-04-05",
+      "state": "Maharashtra",
+      "address": "401/B WING,ISHAAN BLDG,KHEDGALLI,PRABHAD",
+      "pincode": "400025",
+      "id": 3
     }
   ]
 }

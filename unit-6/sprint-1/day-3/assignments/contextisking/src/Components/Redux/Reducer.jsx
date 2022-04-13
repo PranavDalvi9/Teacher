@@ -40,6 +40,7 @@ export const reducer = (store = initState, {type, payload}) => {
 
         case MakePost:
             axios.post("http://localhost:8080/addData", store)
+            alert("Added successfully")
 
             return store
         
