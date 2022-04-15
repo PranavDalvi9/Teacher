@@ -24,12 +24,7 @@ export const loginReducer = (store = initState ,{type, payload}) => {
 
         case LOGIN_FAILURE:
             return {
-                ...store,
-                error: true,
-                loading : false,
-                isAuthenticate: false,
-                token : "",
-                userName : ""
+                ...initState
             }
         
         case LOGOUT:
