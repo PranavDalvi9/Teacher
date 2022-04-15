@@ -6,6 +6,7 @@ import Home  from "./Components/Home";
 import LoginPg from "./Components/LoginPg"
 import TodosCreate from "../src/Components/TodosCreate";
 import { useSelector } from 'react-redux';
+import TodosEdit from './Components/TodosEdit';
 
 
 const PrivateRoute = ({isAuthenticate, children}) => {
@@ -37,6 +38,11 @@ function App() {
 
         <Route path='/todos-create' element={
           <PrivateRoute isAuthenticate={isAuthenticate}><TodosCreate/></PrivateRoute>
+        }></Route>
+
+
+        <Route path='/todos/:id/edit' element={
+          <PrivateRoute isAuthenticate={isAuthenticate}><TodosEdit/></PrivateRoute>
         }></Route>
 
       </Routes>

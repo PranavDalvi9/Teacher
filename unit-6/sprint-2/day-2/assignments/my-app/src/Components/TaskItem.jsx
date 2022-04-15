@@ -4,10 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 // import {todos} from "../Redux/Todos/Reducer"
 import { getTodosData } from "../Redux/Todos/Actions";
 
+import { useNavigate } from 'react-router-dom';
 // import todos from "../Redux/Todos/Reducer"
 
 export default function TaskItem() {
-
+    const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const { todos } = useSelector((state) => state.todos);
@@ -51,6 +52,8 @@ export default function TaskItem() {
                                 ))
                             }
                         </div>
+
+                        <button onClick={() => navigate(`/todos/${e.id}/edit`)}>Edit</button>
 
                     </div>
                 ))
