@@ -1,0 +1,23 @@
+.Home{
+ display: flex;
+}
+
+.sideBar{
+width: 100%;
+background-color: aqua;
+}
+
+.toDo{
+    width: 100%;
+    background-color: rgb(225, 159, 36);
+}
+
+.inProgress{
+    width: 100%;
+    background-color: rgb(30, 215, 76);
+}
+
+.done{
+    width: 100%;
+    background-color: rgb(207, 52, 109);
+}
