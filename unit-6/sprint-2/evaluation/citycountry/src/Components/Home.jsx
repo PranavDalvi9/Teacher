@@ -14,10 +14,10 @@ export default function Home() {
   },[])
 
 
-  fetch("http://localhost:8080/add-city")
-.then((res) => res.json())
-.then((res) => setData(res))
-// .catch((err) => console.log(err))
+//   fetch("http://localhost:8080/add-city")
+// .then((res) => res.json())
+// .then((res) => setData(res))
+// // .catch((err) => console.log(err))
 
 // console.log(data)
   return (
