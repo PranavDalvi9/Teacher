@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function AddCity() {
 const [name, setName] = useState("")
 const [population , setPopulation] = useState("")
-
+const [countryr , setCountryr] = useState("")
 
 const HandleAdd = () => {
     console.log("hello")
@@ -11,7 +11,7 @@ const HandleAdd = () => {
 
     fetch("http://localhost:8080/add-city" , {
         method: "POST",
-        body: JSON.stringify({name, population}),
+        body: JSON.stringify({name, population, countryr}),
         headers:{
             "Content-Type": "application/json"
         }
@@ -27,7 +27,7 @@ const HandleAdd = () => {
 
         <input type="text"  placeholder='Enter Population' onChange={(e) => setPopulation(e.target.value)}/><br/>
 
-        <input type="text" placeholder='Enter countryr'/><br/>
+        <input type="text" placeholder='Enter countryr' onChange={(e) => setCountryr(e.target.value)}/><br/>
 
         <button onClick={HandleAdd}>ADD</button>
     </div>
