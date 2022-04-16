@@ -1,0 +1,15 @@
+{
+  "add-city": [
+    {
+      "name": "delhi",
+      "population": "111111",
+      "id": 1
+    }
+  ],
+  "add-country": [
+    {
+      "country": "india",
+      "id": 1
+    }
+  ]
+}
