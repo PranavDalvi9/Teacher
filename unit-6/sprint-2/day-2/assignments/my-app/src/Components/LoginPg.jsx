@@ -13,10 +13,10 @@ export default function LoginPg() {
   // console.log(isAuthenticate)
 
   const handleLogin = () => {
-    const payload = {
-      username,
-      password
-    };
+    // const payload = {
+    //   username,
+    //   password
+    // };
     dispatch(login({username,password}))
   }
 
@@ -36,3 +36,19 @@ export default function LoginPg() {
     </div>
   )
 }
+
+// https://masai-api-mocker.herokuapp.com/auth/register
+// {
+//   "name": "masai",
+//   "email" : "qqq@com",
+//   "password": "1234",
+//   "username": "masai",
+//   "mobile" : "109382227581094",
+//   "description": "i am sa from1 masai"
+// }
+
+// https://masai-api-mocker.herokuapp.com/auth/login
+// {
+//   "password": "1234",
+//   "username": "masai"
+// }
