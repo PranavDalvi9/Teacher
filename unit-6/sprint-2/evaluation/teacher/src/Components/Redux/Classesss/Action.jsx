@@ -1,6 +1,6 @@
 // import { useDispatch } from "react-redux";
 
-
+import axios from 'axios';
 
 export const CLASSESSS_LOADING = "CLASSESSS_LOADING";
 export const CLASSESSS_SUCCESS = "CLASSESSS_SUCCESS";
@@ -20,22 +20,10 @@ export const cFal1 =() => ({
     type: CLASSESSS_FAILURE 
 })
 
-// export const logout = () => ({
-//   type : LOGOUT
-// })
-
-// export const login = ({username, password}) => (dispatch)=> {
-//     // const dispatch = useDispatch();
-
-//     dispatch(loginLoading())
-//     fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
-//       method: "POST",
-//       body: JSON.stringify({username,password}),
-//       headers:{
-//         "Content-Type": "application/json"
-//       }
-//     })
-//     .then((res) => res.json())
-//     .then((res) => dispatch(loginSuccess({username,token:res.token})))
-//     .catch((err) => dispatch(loginFailure()))
-// }
+export const getClasses2 = (class1) => (dispatch) => {
+   
+    dispatch(cLoad1())
+        axios.post("http://localhost:2344/class",{class1})
+        .then((res) => {dispatch(cSucc1(res.data.class1))})
+        .catch((err) => {dispatch(cFal1(err))})
+}
