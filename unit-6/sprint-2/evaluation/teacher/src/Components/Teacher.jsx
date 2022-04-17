@@ -34,6 +34,9 @@ export default function Teacher() {
 
         <label>Classes : </label>
       <input type="text" placeholder='Classes'/>
+      <button>Add Class</button>
+
+      
     </div>
   )
 }
