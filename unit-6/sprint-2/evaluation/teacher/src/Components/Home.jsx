@@ -10,8 +10,15 @@ export default function Home() {
   const[doctor, setDoctor] = useState("")
 
   useEffect(() => {
-    axios.get(`http://localhost:2344/teacher?name=${doctor}&?page=${pagNum}`).then((res) => setData(res.data));
-    // console.log("data1",data[0].age)
+    axios.get(`http://localhost:2344/teacher`,{
+      params:{
+        page:pagNum,
+        size:4,
+        name:doctor
+
+      }
+    }).then((res) => setData(res.data));
+    console.log("updated");
   }, [pagNum, doctor])
   console.log("data", data)
 
