@@ -24,11 +24,13 @@ export default function Home() {
     <h3>Age : {e.age}</h3>
     <h3>Gender : {e.gender}</h3>
     <h3>Classes :</h3>
-    {/* {
-      e.classe.map((el) => (
+<div>
+{
+      e.classes.map((el) => (
         <p>{el.class1}</p>
       ))
-    } */}
+    } 
+</div>
     <div>
 
     </div>
