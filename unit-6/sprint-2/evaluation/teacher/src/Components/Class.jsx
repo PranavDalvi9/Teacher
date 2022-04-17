@@ -3,6 +3,8 @@ import axios from 'axios';
 import { getClasses2 } from './Redux/Classesss/Action';
 import { useDispatch } from 'react-redux';
 
+import "./Home.css"
+
 
 export default function Class() {
   const dispatch = useDispatch()
@@ -16,11 +18,11 @@ export default function Class() {
     }
  
   return (
-    <div>
-      <h1>Add Class</h1>
+    <div className="App">
+      <h1 className='marginAutotext'>Add Class</h1>
 
         <label>Class :  </label>
-      <input type="text" placeholder='Add Class' onChange={ (e) => {setClass1(e.target.value)}}/><br/><br />
+      <input  className='marginAuto11' type="text" placeholder='Add Class' onChange={ (e) => {setClass1(e.target.value)}}/><br/><br />
 
         <button onClick={handleAdd}>Add</button>
 

@@ -9,6 +9,13 @@ import FormGroup from '@mui/material/FormGroup';
 // import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+import "./Home.css";
 
 
 import axios from 'axios';
@@ -52,10 +59,25 @@ export default function Teacher() {
     }
 
   return (
-    <div>
-      <h1>Add Teacher</h1>
-    <label>Name : </label>
-      <input type="text" placeholder='Name' onChange={(e) => setName(e.target.value) }/><br /><br />
+    <div >
+      <h1 className='marginAutotext' >Add Teacher</h1>
+
+      <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+  
+      <TextField label="Enter Name " variant="filled" onChange={(e) => setName(e.target.value) } color="secondary" focused />
+   
+    </Box> <br />
+
+
+    {/* <label>Name : </label>
+      <input type="text" placeholder='Name' onChange={(e) => setName(e.target.value) }/><br /><br /> */}
       
       {/* <label>Gender : </label>
       <div>
@@ -98,15 +120,29 @@ export default function Teacher() {
             // console.log(e.target.value)
             }}/>
       </RadioGroup>
-    </FormControl>
+    </FormControl> <br /> <br />
+
+
+    <Box
+      component="form"
+      sx={{
+        '& > :not(style)': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+  
+      <TextField label="Enter Age" variant="filled" color="secondary" onChange={(e) => setAge(e.target.value) } focused />
+   
+    </Box> <br />
 
       
 
-        <label>Age : </label>
-      <input type="number" placeholder='Age' onChange={(e) => setAge(e.target.value) } /><br /><br />
+        {/* <label>Age : </label>
+      <input type="number" placeholder='Age' onChange={(e) => setAge(e.target.value) } /><br /><br /> */}
 
 
-     <label>Classes</label>
+     {/* <label>Classes</label>
       {
           data.map((e) => (
             <div>
@@ -117,20 +153,25 @@ export default function Teacher() {
             />{e.class1}
         </div>
           ))
-      } <br /> 
+      } <br />  */}
 
-{/* <FormGroup>
+<FormGroup>
     <h3>Classes</h3>
     {
         data.map((ab) => (
-            <FormControlLabel control={<Checkbox/>} label={ab.class1} onClick ={(e) => {addClass(e.target.value) ; console.log(e.target.value)}} />
+            <FormControlLabel control={<Checkbox/>} label={ab.class1} onChange={(b)=>{addClass(ab._id)}} />
         ))
     }
       
-</FormGroup> */}
+</FormGroup>
 
 
-    <button onClick={ handleAdd}>ADD</button>
+
+<Stack spacing={2} direction="row">
+      <Button variant="contained"  onClick={ handleAdd}>ADD</Button>
+    </Stack>
+
+    {/* <button onClick={ handleAdd}>ADD</button> */}
 
     </div>
   )

@@ -24,3 +24,17 @@
     margin-top: 5.5%;
     padding-left: 3%;
 }
+
+.marginAuto{
+    margin: auto;
+    margin-left: 10%;
+}
+
+
+.marginAutotext{
+    text-align: center;
+}
+
+button{
+    padding: 1%;
+}

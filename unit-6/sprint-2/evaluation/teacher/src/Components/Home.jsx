@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import "./Home.css"
 
+// import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import "./Home.css"
+
+
+
 export default function Home() {
 
 
@@ -24,10 +31,22 @@ export default function Home() {
 
   return (
     <div >
-      <h1>Home</h1>
+      <h1 className='marginAutotext' className="App">Home</h1>
+{/* className="App" */}
+      <div className='marginAuto'>
+      <Box
+      sx={{
+        width: "90%",
+        maxWidth: '100%',
+      
+      }}
+    >
+      <TextField fullWidth label="ENTER TEACHER" id="fullWidth" onChange={(e)=>{setDoctor(e.target.value)}} />
+    </Box> <br />
+      </div>
 
-      <input type="text"  placeholder='Enter Doctor' onChange={(e) => {setDoctor(e.target.value) ; console.log("doc",doctor)}}/>
-      <button>Search</button>
+      {/* <input type="text"  placeholder='Enter Doctor' onChange={(e) => {setDoctor(e.target.value) ; console.log("doc",doctor)}}/>
+      <button>Search</button> */}
 
 
       <div className='individualTec'>
@@ -39,7 +58,7 @@ export default function Home() {
             <h3>Name : {e.name}</h3>
             <h3>Age : {e.age}</h3>
             <h3>Gender : {e.gender}</h3>
-            
+            <h3>classes : {e.classes.length}</h3>
             <div className='classFlex'>
             <h3>Classes :</h3>
               {
