@@ -17,6 +17,8 @@ router.post("",async(req,res) => {
 
 router.get("", async (req, res) => {
     try {
+
+        
       const classCon = await Class.find().lean().exec();
       console.log(classCon)
       return res.send(classCon)

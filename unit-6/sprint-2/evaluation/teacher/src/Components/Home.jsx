@@ -6,16 +6,21 @@ export default function Home() {
 
 
   const [data, setData] = useState([])
+  const [pagNum, setPagNum] = useState(1)
+  const[doctor, setDoctor] = useState("")
 
   useEffect(() => {
-    axios.get('http://localhost:2344/teacher').then((res) => setData(res.data));
+    axios.get(`http://localhost:2344/teacher?name=${doctor}&?page=${pagNum}`).then((res) => setData(res.data));
     // console.log("data1",data[0].age)
-  }, [])
+  }, [pagNum, doctor])
   console.log("data", data)
 
   return (
     <div >
       <h1>Home</h1>
+
+      <input type="text"  placeholder='Enter Doctor' onChange={(e) => {setDoctor(e.target.value) ; console.log("doc",doctor)}}/>
+      <button>Search</button>
 
 
       <div className='individualTec'>
@@ -44,6 +49,15 @@ export default function Home() {
       </div>
       
 
+      <div className='PaginationClass'>
+        <button onClick={()=>{setPagNum(pagNum-1)}}>Previous</button>
+        <button onClick={()=>{setPagNum(1)}}>1</button>
+        <button  onClick={()=>{setPagNum(2)}}>2</button>
+        <button onClick={()=>{setPagNum(3)}}>3</button>
+        <button onClick={()=>{setPagNum(4)}}>4</button>
+        <button onClick={()=>{setPagNum(5)}}>5</button>
+        <button onClick={()=>{setPagNum(pagNum+1)}}>Next</button>
+      </div>
     </div>
   )
 }

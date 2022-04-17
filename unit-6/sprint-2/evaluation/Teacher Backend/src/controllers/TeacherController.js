@@ -16,9 +16,22 @@ router.post("",async(req,res) => {
 
 router.get("", async (req, res) => {
     try {
-      const user = await Teacher.find().populate({path: "classes", select:["class1"]}).lean().exec();
+
+      const page = req.query.page || 1;
+      const size = req.query.size || 5;
+    
+
+      if (req.query.name) {
+        const user = await Teacher.find({name: req.query.name}).populate({path: "classes", select:["class1"]}).skip((page-1)*size).limit(size).lean().exec();
       console.log(user)
-      return res.send(user)
+       return res.send(user)
+      } else {
+        const user = await Teacher.find().populate({path: "classes", select:["class1"]}).skip((page-1)*size).limit(size).lean().exec();
+        console.log(user)
+        return res.send(user)
+      }
+
+      
     } catch (error) {``
       return res.send(error);
     }
