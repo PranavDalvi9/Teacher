@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
+import "./Home.css"
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
 
 {
   data.map((e) => (
-    <div>
+    <div className='individualTec'>
     <h3>Name : {e.name}</h3>
     <h3>Age : {e.age}</h3>
     <h3>Gender : {e.gender}</h3>
