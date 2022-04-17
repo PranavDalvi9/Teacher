@@ -25,7 +25,6 @@ function App() {
        <button onClick={() => {navigate("/login")}}>Login</button>
        <button onClick={() => {navigate("/")}}>Home</button>
        <button onClick={() => {navigate("/todos-create")}}>Tod-Dos</button>
-       <bu
        <button></button>
      </div>
 

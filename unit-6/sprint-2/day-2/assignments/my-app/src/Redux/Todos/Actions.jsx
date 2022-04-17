@@ -13,6 +13,7 @@ export const getTodosLoading = () => ({
 
 export const getTododsErrors = () => ({
     type: GET_TODOS_ERROR
+    
 })
 
 export const getTodosData = () => (dispatch) => {
