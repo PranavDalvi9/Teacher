@@ -8,6 +8,13 @@ import TextField from '@mui/material/TextField';
 import "./Home.css"
 
 
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+// import SearchIcon from '@mui/icons-material/Search';
+
+
 
 export default function Home() {
 
@@ -32,18 +39,22 @@ export default function Home() {
   return (
     <div >
       <h1 className='marginAutotext' className="App">Home</h1>
-{/* className="App" */}
-      <div className='marginAuto'>
-      <Box
-      sx={{
-        width: "90%",
-        maxWidth: '100%',
-      
-      }}
+
+        <div className='inputMUI'>
+        <Paper
+      component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 1100 }}
     >
-      <TextField fullWidth label="ENTER TEACHER" id="fullWidth" onChange={(e)=>{setDoctor(e.target.value)}} />
-    </Box> <br />
-      </div>
+      
+      <InputBase
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Search By Teacher Name"
+        inputProps={{ 'aria-label': 'search google maps' }}
+        onChange={(e) => {setDoctor(e.target.value) ; console.log("doc",doctor)}}
+      />    
+    </Paper>
+        </div>
+
 
       {/* <input type="text"  placeholder='Enter Doctor' onChange={(e) => {setDoctor(e.target.value) ; console.log("doc",doctor)}}/>
       <button>Search</button> */}

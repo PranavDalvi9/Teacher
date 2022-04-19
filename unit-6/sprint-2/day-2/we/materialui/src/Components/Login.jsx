@@ -1,6 +1,4 @@
 import React from 'react'
-import "./Home.css"
-import { useNavigate } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -8,15 +6,10 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-
 export default function Login() {
-  const navigate = useNavigate();
-
   return (
-    <div className='App'>
+    <div>
 
-<h1>Login</h1>
-        
 <Box
       component="form"
       sx={{
@@ -30,14 +23,9 @@ export default function Login() {
 
       <TextField label="Password" variant="filled" color="success" focused /> <br /><br />
 
-      <Button className='ButtonDiv' variant="contained">Login</Button> <br /><br />
+      <Button variant="contained">Login</Button><br />
 
-      <Button className='ButtonDiv' variant="contained"  onClick ={() => {navigate("/register")}}>Register</Button>
-
-  
-  
-
-      
+      <Button variant="contained">Register</Button>
   
     </Box>
       

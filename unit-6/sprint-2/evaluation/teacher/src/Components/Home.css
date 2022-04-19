@@ -38,3 +38,23 @@
 button{
     padding: 1%;
 }
+
+
+
+/* MUI */
+
+.inputMUI{
+    margin-left: 7%;
+}
+
+.LoginDiv{
+    margin-top: 5%;
+    margin-left: 35%;
+}
+
+.ButtonDiv{
+    width: 100%;
+    background-color: aqua;
+
+}
+
