@@ -15,6 +15,12 @@ import IconButton from '@mui/material/IconButton';
 // import SearchIcon from '@mui/icons-material/Search';
 
 
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
 
 export default function Home() {
 
@@ -24,7 +30,7 @@ export default function Home() {
   const[doctor, setDoctor] = useState("")
 
   useEffect(() => {
-    axios.get(`http://localhost:2344/teacher`,{
+    axios.get(`https://evaluationteacher1.herokuapp.com/teacher`,{
       params:{
         page:pagNum,
         size:4,
@@ -60,7 +66,7 @@ export default function Home() {
       <button>Search</button> */}
 
 
-      <div className='individualTec'>
+      {/* <div className='individualTec'>
       {
         data.map((e) => (
 
@@ -82,6 +88,33 @@ export default function Home() {
           </div>
         ))
       }
+
+      </div> */}
+
+
+      <div className='individualTec'>
+
+        {
+          data.map((e)=>(
+            <Card sx={{ maxWidth: 340, minHeight:170 }}>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Name : {e.name}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Age : {e.age}  
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Gender : {e.gender}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Classes : {e.classes.length}</Button>
+            </CardActions>
+          </Card>
+          ))
+        }
+     
 
       </div>
       
