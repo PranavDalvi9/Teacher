@@ -1,4 +1,7 @@
 import React from 'react'
+import { logout } from './Components/Redux/Login/Action';
+import { useDispatch, useSelector } from 'react-redux';
+import { Navigate } from 'react-router-dom';
 
 import logo from './logo.svg';
 import './App.css';
@@ -15,15 +18,29 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Register from './Components/Register';
 
+const PrivateRoute = ({isAuthenticate, children}) => {
+  return isAuthenticate ? children : <Navigate to={"/login"}/> 
+}
+
 
 function App() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const isAuthenticate = useSelector((store) => store.login.isAuthenticate)
 
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+
+  const handleLogout = () => {
+    // console.log("hello")
+    <Navigate to={"/login"}/>
+    dispatch(logout());
+    console.log("out")
+  }
 
 
   return (
@@ -46,6 +63,7 @@ function App() {
           <Tab label="Add Teacher" onClick ={() => {navigate("/teacher")}} />
           <Tab label="Add Class" onClick ={() => {navigate("/class")}} />
           <Tab label="Login" onClick ={() => {navigate("/login")}} />
+          <Tab label="Logout" onClick={handleLogout}/>
         </Tabs>
       </Box>
     </Box>
@@ -55,12 +73,26 @@ function App() {
       
 
       <Routes>
-        <Route path='/' element = {<Home/>}/>
+      <Route path='/login' element = {<Login/>}/>
+      <Route path='/register' element= {<Register/>}/>
+      <Route path='/' element = {<Home/>}/>
+
+      <Route path='/teacher' element={
+          <PrivateRoute isAuthenticate={isAuthenticate}><Teacher/></PrivateRoute>
+        }></Route>
+
+      <Route path='/class' element={
+          <PrivateRoute isAuthenticate={isAuthenticate}><Class/></PrivateRoute>
+        }></Route>
+
+
+
+        {/* <Route path='/' element = {<Home/>}/>
         <Route path='/login' element = {<Login/>}/>
         <Route path='/register' element= {<Register/>}/>
         <Route path='/teacher' element = {<Teacher/>}/>
         <Route path='/class' element= {<Class/>}/>
-        <Route path='/' element = {<Home/>}/>
+        <Route path='/' element = {<Home/>}/> */}
       </Routes>
       {/* <Home/>
       <Login/>

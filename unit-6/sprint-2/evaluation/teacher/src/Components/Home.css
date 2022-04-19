@@ -62,3 +62,11 @@ button{
 
 }
 
+.MuiButton-root{
+    background-color: #4700D8 !important;
+}
+
+
+.buttons123{
+    background-color: transparent !important;
+}

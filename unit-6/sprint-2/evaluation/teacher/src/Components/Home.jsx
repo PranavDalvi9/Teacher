@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import "./Home.css"
+// import "./Home.css"
 
 // import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -109,7 +109,7 @@ export default function Home() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Classes : {e.classes.length}</Button>
+              <Button className='buttons123' size="small">Classes : {e.classes.length}</Button>
             </CardActions>
           </Card>
           ))
