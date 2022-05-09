@@ -10,6 +10,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 import Avatar from '@mui/material/Avatar';
 
+import { useNavigate } from 'react-router-dom'
+
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
       right: -3,
@@ -20,23 +22,31 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   }));
 
 export default function Navbar() {
+
+
+  const navigate = useNavigate()
+
+  const handleLogin = () => {
+    navigate("/login")
+  }
+
   return (
     <div>
       <div className='NavBarMain'>
-      <div>Name</div>
-      <div>Home</div>
-      <div>Men</div>
-      <div>Women</div>
-      <div>Baby Wears</div>
-      <div>Blog</div>
-      <div>Contact</div>
-      <div><input type="text" placeholder='Search' /></div>
+      <div onClick={()=> navigate("/")}>Name</div>
+      <div onClick={()=> navigate("/")}>Home</div>
+      <div onClick={()=> navigate("/mens_Fashion")}>Men</div>
+      <div onClick={()=> navigate("/womens_Fashion")}>Women</div>
+      <div onClick={()=> navigate("/baby_Fashion")}>Baby Wears</div>
+      <div onClick={()=> navigate("/blog")}>Blog</div>
+      <div onClick={()=> navigate("/contact_us")}>Contact</div>
+      <div onClick={()=> navigate("/login")}><input type="text" placeholder='Search' /></div>
 
-      <div>
+      <div onClick={handleLogin}>
       <Avatar src="/broken-image.jpg" />
       </div>
 
-      <div>
+      <div onClick={()=> navigate("/cart")}>
       <IconButton aria-label="cart">
       <StyledBadge badgeContent={5} color="secondary">
         <ShoppingCartIcon />
