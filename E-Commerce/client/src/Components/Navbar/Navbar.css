@@ -3,7 +3,13 @@
     display: flex;
     justify-content: space-evenly;
     /* position: fixed; */
-    height: 50px;
+    height: 70px;
     margin: auto;
     align-items: center;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+input{
+    height: 140%;
 }
