@@ -2,7 +2,7 @@
     border: 2px solid red;
     display: flex;
     justify-content: space-evenly;
-    /* position: fixed; */
+    /* position:fixed; */
     height: 70px;
     margin: auto;
     align-items: center;

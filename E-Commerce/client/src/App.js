@@ -23,7 +23,12 @@ function App() {
 
 <Navbar/>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={
+          <>
+          <LandingPage />
+          <Category/>
+          </>
+        } />
       </Routes>
 
       <Routes>
