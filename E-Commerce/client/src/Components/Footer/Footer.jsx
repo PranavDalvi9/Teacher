@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./Footer.css"
 
 export default function Footer() {
+    const navigate = useNavigate()
     return (
         <div className='Footer'>
            <div>
@@ -45,7 +47,7 @@ export default function Footer() {
                </div>
 
                <div>
-                   <p>Shop Men</p>
+                   <p onClick={() => {navigate("/mens_Fashion")}}>Shop Men </p>
 
                    <div>
                        <p>Clothing Fashion</p>
@@ -57,7 +59,7 @@ export default function Footer() {
                </div>
 
                <div>
-               <p>Shop Women</p>
+               <p onClick={() => {navigate("/womens_Fashion")}}>Shop Women</p>
                <div>
                <p>Clothing Fashion</p>
                        <p>Winter</p>
@@ -68,7 +70,7 @@ export default function Footer() {
                </div>
 
                <div>
-               <p>Baby Collection</p>
+               <p onClick={() => {navigate("/baby_Fashion")}}>Baby Collection</p>
                        <div>
                        <p>Clothing Fashion</p>
                        <p>Winter</p>
