@@ -1,31 +1,159 @@
-.ProdDetails{
-    border: 2px solid red;
-    width: 88%;
+.ProdDetails {
+  /* border: 2px solid red; */
+  width: 88%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  text-align: start;
+  margin-top: 2%;
+}
+
+.ProdImages {
+  /* border: 2px solid blue; */
+  width: 45%;
+  height: 100%;
+  margin-top: 5%;
+}
+.ProdImages>img{
+    width: 100%;
+    height: 100%;
+}
+
+.ProdInfo {
+  /* border: 2px solid peru; */
+  margin-left: 5%;
+  width: 50%;
+  height: 100%;
+}
+.ProdInfo > div:nth-child(1) > p {
+  /* border: 2px solid brown; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 180%;
+}
+.ProdInfo > div:nth-child(2) > p {
+  /* border: 2px solid brown; */
+  font-weight: bolder;
+  font-size: 120%;
+}
+.ProdInfo > div:nth-child(3) > p {
+  /* border: 2px solid brown; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 120%;
+}
+.checked {
+  color: green;
+}
+
+.PriceDiv {
+  display: flex;
+}
+
+.PriceDiv>div:nth-child(1)>p{
+    /* border: 2px solid green; */
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+    font-weight: bolder;
+    font-size: 170%;
+    width: 100%;
+    margin: 0px;
+}
+.PriceDiv>div:nth-child(2)>p{
+    /* border: 2px solid green; */
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+    font-weight: bolder;
+    font-size: 170%;
+    margin: 0px;
+    margin-left: 25px;
+    width: 100%;
+    color: #80828d;
+    text-decoration: line-through;
+}
+.PriceDiv>div:nth-child(3)>p{
+    /* border: 2px solid green; */
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+    font-weight: bolder;
+    font-size: 170%;
+    margin: 0px;
+    margin-left: 25px;
+    width: 100%;
+    color: #ff905a;
+}
+
+.SelectSizeDiv{
+    margin-top: 3%;
+}
+.SelectSizeDiv>span:nth-child(1){
+    /* border: 2px solid red; */
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+}
+.SelectSizeDiv>span:nth-child(2){
+    /* border: 2px solid red; */
+    margin-left: 4%;
+    color: #ff6097;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.SizesDiv {
+    width: 80%;
     margin: auto;
-    height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.SizesDiv>div{
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 4%;
+    padding-top: 2%;
+}
+.SizesDiv>div>p{
+    margin-top: -0.001px;
+    font-size: 180%;
+    font-weight: bolder;
+}
+.SizesDiv>div:hover{
+    background-color: red;
+    color: azure;
+}
+
+.AddButton{
+    margin-top: 10%;
     display: flex;
 }
 
-.ProdImages{
-    border: 2px solid blue;
+.AddButton>button:nth-child(1){
     width: 45%;
-    height: 500px;
+    height: 50px;  
+    background-color: #ff3e6c;
+    border: none;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bolder;
 }
 
-.ProdInfo{
-    border: 2px solid peru;
+.AddButton>button:nth-child(2){
+    width: 35%;
     margin-left: 5%;
-    width: 50%;
-    height: 500px;
+    /* background-color: #ff3e6c; */
+    border: none;
+    /* color: whitesmoke; */
+    font-size: larger;
+    font-weight: bolder;
 }
-.PriceDiv{
-    display: flex;
+.AddButton>button:nth-child(2):hover{
+    border: 1px solid black;
 }
 
-.SizesDiv{
-    display: flex;
-}
-
-.PriceDivSmall{
-    display: flex;
+.PorductDetailDiv>p{
+/* border: 2px solid red; */
+margin-top:10%;
+font-size: 140%;
+font-weight: bolder;
 }
