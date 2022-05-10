@@ -11,6 +11,7 @@ import Contact from "./Components/ContactUs/ContactUs"
 import CartPage from "./Components/CartPage/CartPage";
 import DeliveryOptions from "./Components/DeliveryOptions/DeliveryOptions";
 import Footer from "./Components/Footer/Footer";
+import CategoryPage from "./Components/CategoryPage/CategoryPage";
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path="/mens_Fashion" element={<Category />} />
+        <Route path="/mens_Fashion" element={<CategoryPage />} />
       </Routes>
 
       <Routes>

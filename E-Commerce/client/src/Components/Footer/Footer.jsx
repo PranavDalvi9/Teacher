@@ -96,7 +96,7 @@ export default function Footer() {
 
            <div className='Foote3'>
                 <div>
-                    <p>Copyright ©2022 All rights reserved | This template is made with  by Pranav</p>
+                    <p>Copyright ©2022 All rights reserved | This template is made with  by Pranav Dalvi</p>
                 </div>
            </div>
         </div>  
