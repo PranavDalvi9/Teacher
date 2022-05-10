@@ -10,7 +10,7 @@ export default function BabyWear() {
       <div className='CategoryHeading'>
           <p>Baby Wear Category</p>
           <p>
-              <span>Home |</span>
+              <span onClick={() => {navigate("/")}}>Home |</span>
               <span> Baby Wear Category</span>
           </p>
       </div>

@@ -10,7 +10,7 @@ export default function MenCategoryPage() {
       <div className='CategoryHeading'>
           <p>Men Category</p>
           <p>
-              <span>Home |</span>
+              <span onClick={() => {navigate("/")}}>Home |</span>
               <span> Men Category</span>
           </p>
       </div>
