@@ -13,6 +13,7 @@ import DeliveryOptions from "./Components/DeliveryOptions/DeliveryOptions";
 import Footer from "./Components/Footer/Footer";
 import CategoryPage from "./Components/CategoryPage/CategoryPage";
 import ProductDescriptionPage from "./Components/ProductDescriptionPage/ProductDescriptionPage";
+import SaleOffer from "./Components/SaleOffer/SaleOffer";
 
 function App() {
 
@@ -26,13 +27,14 @@ function App() {
     
 
 <Navbar/>
+<SaleOffer/>
       <Routes>
         <Route path="/" element={
           <>
           <LandingPage />
           <Category/>
           <DeliveryOptions/>
-          <Footer/>
+         
           </>
         } />
       </Routes>
@@ -68,6 +70,8 @@ function App() {
       <Routes>
         <Route path="/cart" element={<CartPage />} />
       </Routes>
+
+      <Footer/>
     </div>
   );
 }

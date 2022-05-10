@@ -49,7 +49,7 @@ export default function ProductDescriptionPage() {
                     </div>
 
                     <div>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit libero dolorum magni illo veniam est possimus ex quia velit consectetur.</p>
+                        <p>Lorem lore ipsum dolor sit, amet consectetur adipisicing elit. Impedit libero dolorum magni illo veniam est possimus ex quia velit consectetur.</p>
                     </div>
 
                 </div>
