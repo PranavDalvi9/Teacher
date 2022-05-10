@@ -12,6 +12,7 @@ import CartPage from "./Components/CartPage/CartPage";
 import DeliveryOptions from "./Components/DeliveryOptions/DeliveryOptions";
 import Footer from "./Components/Footer/Footer";
 import CategoryPage from "./Components/CategoryPage/CategoryPage";
+import ProductDescriptionPage from "./Components/ProductDescriptionPage/ProductDescriptionPage";
 
 function App() {
 
@@ -49,7 +50,7 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path="/womens_Fashion" element={<LandingPage />} />
+        <Route path="/womens_Fashion" element={<ProductDescriptionPage />} />
       </Routes>
 
       <Routes>

@@ -4,7 +4,7 @@ import "./CategoryPage.css"
 export default function CategoryPage() {
   return (
     <div>
-
+ 
       <div className='CategoryHeading'>
           <p>Category</p>
           <p>

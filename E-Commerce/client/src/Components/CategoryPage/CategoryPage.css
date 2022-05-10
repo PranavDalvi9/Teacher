@@ -3,6 +3,10 @@
     height: 140px;
 }
 
+.CategoryHeading:hover{
+    cursor: pointer;
+}
+
 .CategoryHeading>p:nth-child(1){
     /* border: 2px solid red; */
     font-family: Jost, sans-serif;

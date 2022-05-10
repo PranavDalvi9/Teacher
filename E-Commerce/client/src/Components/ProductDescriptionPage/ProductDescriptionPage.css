@@ -1,0 +1,31 @@
+.ProdDetails{
+    border: 2px solid red;
+    width: 88%;
+    margin: auto;
+    height: 500px;
+    display: flex;
+}
+
+.ProdImages{
+    border: 2px solid blue;
+    width: 45%;
+    height: 500px;
+}
+
+.ProdInfo{
+    border: 2px solid peru;
+    margin-left: 5%;
+    width: 50%;
+    height: 500px;
+}
+.PriceDiv{
+    display: flex;
+}
+
+.SizesDiv{
+    display: flex;
+}
+
+.PriceDivSmall{
+    display: flex;
+}
