@@ -11,9 +11,11 @@ import Contact from "./Components/ContactUs/ContactUs"
 import CartPage from "./Components/CartPage/CartPage";
 import DeliveryOptions from "./Components/DeliveryOptions/DeliveryOptions";
 import Footer from "./Components/Footer/Footer";
-import CategoryPage from "./Components/CategoryPage/CategoryPage";
+import MenCategoryPage from "./Components/MenCategoryPage/MenCategoryPage";
 import ProductDescriptionPage from "./Components/ProductDescriptionPage/ProductDescriptionPage";
 import SaleOffer from "./Components/SaleOffer/SaleOffer";
+import WomenCategoryPage from "./Components/WomenCategoryPage/WomenCategoryPage";
+import BabyWear from "./Components/BabyWear/BabyWear";
 
 function App() {
 
@@ -48,15 +50,15 @@ function App() {
       </Routes>
 
       <Routes>
-        <Route path="/mens_Fashion" element={<CategoryPage />} />
+        <Route path="/mens_Fashion" element={<MenCategoryPage />} />
       </Routes>
 
       <Routes>
-        <Route path="/womens_Fashion" element={<ProductDescriptionPage />} />
+        <Route path="/womens_Fashion" element={<WomenCategoryPage />} />
       </Routes>
 
       <Routes>
-        <Route path="/baby_Fashion" element={<Category />} />
+        <Route path="/baby_Fashion" element={<BabyWear />} />
       </Routes>
 
       <Routes>
@@ -69,6 +71,10 @@ function App() {
 
       <Routes>
         <Route path="/cart" element={<CartPage />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/description" element={<ProductDescriptionPage />} />
       </Routes>
 
       <Footer/>
