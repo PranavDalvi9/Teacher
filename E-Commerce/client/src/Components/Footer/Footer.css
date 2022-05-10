@@ -4,6 +4,7 @@
      background-color: #171613;
     color: #ffffff;
     /* border: 2px solid rebeccapurple; */
+    height: 700px !important;
     /* align-content: center; */
     /* border-bottom: 1px solid wheat; */
 }
@@ -90,7 +91,8 @@
 
 .Footer2{
     /* margin-top: 5%; */
-    /* border: 2px solid red; */
+    /* border: 2px solid red;    */
+    margin-bottom: 3%;
 }
 
 .Footer2>div{
@@ -130,4 +132,18 @@
     /* font-style: italic; */
     font-size: 17px; 
     text-decoration: underline;
+}
+
+.Foote3{
+    height: 150px !important;
+    /* border: 2px solid greenyellow; */
+}
+.Foote3>div>p{
+    /* border: 2px solid greenyellow !important; */
+    width: 900px;
+    margin-left: -240px !important;
+    font-family: Jost, sans-serif;
+    font-weight: 300 !important;
+    font-size: 16px;
+    color: #bbb9b5;
 }

@@ -91,6 +91,15 @@ export default function Footer() {
                </div>
 
            </div>
-        </div>
+
+           <div className='bottomborder'></div>
+
+           <div className='Foote3'>
+                <div>
+                    <p>Copyright ©2022 All rights reserved | This template is made with  by Pranav</p>
+                </div>
+           </div>
+        </div>  
     )
 }
+
