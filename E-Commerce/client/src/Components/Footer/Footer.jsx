@@ -40,11 +40,56 @@ export default function Footer() {
            <div className='bottomborder'></div>
 
            <div className='Footer2'>
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
+               <div>
+                    <p>Name</p>
+               </div>
+
+               <div>
+                   <p>Shop Men</p>
+
+                   <div>
+                       <p>Clothing Fashion</p>
+                       <p>Winter</p>
+                       <p>Summer</p>
+                       <p>Formal</p>
+                       <p>Casual</p>
+                   </div>
+               </div>
+
+               <div>
+               <p>Shop Women</p>
+               <div>
+               <p>Clothing Fashion</p>
+                       <p>Winter</p>
+                       <p>Summer</p>
+                       <p>Formal</p>
+                       <p>Casual</p>
+               </div>
+               </div>
+
+               <div>
+               <p>Baby Collection</p>
+                       <div>
+                       <p>Clothing Fashion</p>
+                       <p>Winter</p>
+                       <p>Summer</p>
+                       <p>Formal</p>
+                       <p>Casual</p>
+                       </div>
+               </div>
+
+               <div>
+               <p>Quick Links</p>
+                      <div>
+                      <p>Track Your Order</p>
+                       <p>Support</p>
+                       <p>FAQ</p>
+                       <p>Carrier</p>
+                       <p>About</p>
+                       <p>Contact Us</p>
+                      </div>
+               </div>
+
            </div>
         </div>
     )
