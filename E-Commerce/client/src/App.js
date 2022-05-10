@@ -10,6 +10,7 @@ import Blog from "./Components/Blog/Blog"
 import Contact from "./Components/ContactUs/ContactUs"
 import CartPage from "./Components/CartPage/CartPage";
 import DeliveryOptions from "./Components/DeliveryOptions/DeliveryOptions";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <LandingPage />
           <Category/>
           <DeliveryOptions/>
+          <Footer/>
           </>
         } />
       </Routes>
